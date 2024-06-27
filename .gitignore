@@ -1,1 +1,3 @@
-.nothing
+a.out
+*.o
+*.a
