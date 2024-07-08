@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanbonil <sanbonil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/27 16:33:47 by sanbonil          #+#    #+#             */
-/*   Updated: 2024/06/27 16:33:49 by sanbonil         ###   ########.fr       */
+/*   Created: 2024/07/08 17:12:40 by sanbonil          #+#    #+#             */
+/*   Updated: 2024/07/08 17:12:42 by sanbonil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
+	size_t	size;
 	size_t	i;
-	size_t	len;
+	size_t	j;
+	char	*dst;
 
-	len = 0;
-	if (src != NULL)
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if ((dst = ft_calloc(sizeof(char), size)) == NULL)
+		return (NULL);
+	i = 0;
+	while (*(s1 + i))
 	{
-		len = ft_strlen(src);
-		if (dst != NULL && dstsize != 0)
-		{
-			i = 0;
-			while ((i < len) && i < (dstsize - 1))
-			{
-				dst[i] = src[i];
-				i++;
-			}
-			dst[i] = '\0';
-		}
+		*(dst + i) = *(s1 + i);
+		i++;
 	}
-	return (len);
+	j = 0;
+	while (*(s2 + j))
+	{
+		*(dst + i + j) = *(s2 + j);
+		j++;
+	}
+	*(dst + i + j) = '\0';
+	return (dst);
 }

@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanbonil <sanbonil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/27 16:33:47 by sanbonil          #+#    #+#             */
-/*   Updated: 2024/06/27 16:33:49 by sanbonil         ###   ########.fr       */
+/*   Created: 2024/07/08 17:04:18 by sanbonil          #+#    #+#             */
+/*   Updated: 2024/07/08 17:52:12 by sanbonil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
-	size_t	len;
+	char	*ptr;
+	char	*ptr2;
+	int		i;
 
-	len = 0;
-	if (src != NULL)
+	ptr = (char *)s;
+	ptr2 = 0;
+	i = 0;
+	while (*(ptr + i))
 	{
-		len = ft_strlen(src);
-		if (dst != NULL && dstsize != 0)
-		{
-			i = 0;
-			while ((i < len) && i < (dstsize - 1))
-			{
-				dst[i] = src[i];
-				i++;
-			}
-			dst[i] = '\0';
-		}
+		if (*(ptr + i) == c)
+			ptr2 = ptr + i;
+		i++;
 	}
-	return (len);
+	if (c == '\0')
+		return (ptr + i);
+	return (ptr2);
 }
