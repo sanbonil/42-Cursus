@@ -6,7 +6,7 @@
 /*   By: sanbonil <sanbonil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/27 16:33:47 by sanbonil          #+#    #+#             */
-/*   Updated: 2024/06/27 16:33:49 by sanbonil         ###   ########.fr       */
+/*   Updated: 2024/07/09 10:47:26 by sanbonil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	len = 0;
 	if (src != NULL)
 	{
-		len = ft_strlen(src);
+		len = ft_strlen((char *)src);
 		if (dst != NULL && dstsize != 0)
 		{
 			i = 0;

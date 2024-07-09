@@ -6,7 +6,7 @@
 /*   By: sanbonil <sanbonil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 10:58:47 by sanbonil          #+#    #+#             */
-/*   Updated: 2024/06/18 21:18:02 by sanbonil         ###   ########.fr       */
+/*   Updated: 2024/07/09 12:37:51 by sanbonil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *ptr, int c, size_t len)
 {
 	unsigned char	*s;
-	size_t		i;
+	size_t			i;
 
 	i = 0;
 	s = ptr;

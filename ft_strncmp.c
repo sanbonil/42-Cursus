@@ -6,21 +6,22 @@
 /*   By: sanbonil <sanbonil@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:25 by sanbonil          #+#    #+#             */
-/*   Updated: 2024/03/28 12:58:28 by sanbonil         ###   ########.fr       */
+/*   Updated: 2024/07/09 16:24:38 by sanbonil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	unsigned int	i;
 
 	i = 0;
 	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);
@@ -28,10 +29,6 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 /*int main()
 {
-char s1[] = "holaAa";
-char s2[] = "holass";
-unsigned int n = 4;
-
-printf("%d",ft_strncmp(s1, s2, n));
-return(0);
-} */
+	printf("%d",ft_strncmp("test\2000", "test\200", 60));
+	return(0);
+}*/

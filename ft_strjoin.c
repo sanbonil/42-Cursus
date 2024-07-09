@@ -6,7 +6,7 @@
 /*   By: sanbonil <sanbonil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 17:12:40 by sanbonil          #+#    #+#             */
-/*   Updated: 2024/07/08 17:12:42 by sanbonil         ###   ########.fr       */
+/*   Updated: 2024/07/09 16:34:43 by sanbonil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,16 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	size = ft_strlen(s1) + ft_strlen(s2) + 1;
-	if ((dst = ft_calloc(sizeof(char), size)) == NULL)
+	size = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	dst = ft_calloc(size, sizeof(char));
+	if (dst == NULL)
 		return (NULL);
-	i = 0;
-	while (*(s1 + i))
-	{
-		*(dst + i) = *(s1 + i);
-		i++;
-	}
-	j = 0;
-	while (*(s2 + j))
-	{
-		*(dst + i + j) = *(s2 + j);
-		j++;
-	}
-	*(dst + i + j) = '\0';
+	i = -1;
+	while (s1[++i])
+		dst[i] = s1[i];
+	j = -1;
+	while (s2[++j])
+		dst[i + j] = s2[j];
+	dst[i + j] = '\0';
 	return (dst);
 }

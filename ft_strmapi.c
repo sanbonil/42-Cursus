@@ -6,7 +6,7 @@
 /*   By: sanbonil <sanbonil@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 17:13:30 by sanbonil          #+#    #+#             */
-/*   Updated: 2024/07/08 17:13:32 by sanbonil         ###   ########.fr       */
+/*   Updated: 2024/07/09 10:54:11 by sanbonil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s)
 		return (ft_strdup(""));
-	len = ft_strlen(s);
+	len = ft_strlen((char *)s);
 	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new)
 		return (NULL);
