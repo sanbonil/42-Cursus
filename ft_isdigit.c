@@ -18,3 +18,23 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
+
+/*
+#include <stdio.h>
+
+int main()
+	{
+char	test1 = '3';
+char	test2 = 'a';
+
+if (ft_isdigit(test1) == 1)
+	printf("'%c' es un dígito.\n", test1);
+else
+	prinf("'%c' no es un dígito.\n", test1);
+if (ft_isdigit(test2) == 1)
+	printf("'%c' es un dígito.\n", test2);
+else
+	prinf("'%c' no es un dígito.\n", test2);
+return(0);
+	}
+*/
