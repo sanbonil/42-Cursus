@@ -30,3 +30,26 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (mem);
 }
+
+/*
+#include <stdio.h>
+
+int main() 
+{    
+    size_t elementos = 5;
+    int i = 0;
+    
+    char *array = (char *)ft_calloc(elementos, sizeof(char));
+    if (array == NULL) {
+        fprintf(stderr, "Error: No se pudo asignar memoria.\n");
+        return 1;
+    }
+    while(array[i]) 
+    {
+        printf("%d ", array[i]);
+	i++;
+    }
+    printf("\n");
+    free(array);
+    return 0;
+}
