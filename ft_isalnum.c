@@ -18,3 +18,35 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+/*
+#include <stdio.h>
+
+int main() {
+    char test_char1 = 'a';
+    char test_char2 = '5';
+    char test_char3 = '*';
+    
+    printf("'%c' es alfanumérico: ", test_char1);
+    if (ft_isalnum(test_char1)) {
+        printf("true\n");
+    } else {
+        printf("false\n");
+    }
+
+    printf("'%c' es alfanumérico: ", test_char2);
+    if (ft_isalnum(test_char2)) {
+        printf("true\n");
+    } else {
+        printf("false\n");
+    }
+
+    printf("'%c' es alfanumérico: ", test_char3);
+    if (ft_isalnum(test_char3)) {
+        printf("true\n");
+    } else {
+        printf("false\n");
+    }
+
+    return 0;
+}
+*/
