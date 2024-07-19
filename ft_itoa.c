@@ -55,3 +55,32 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+/* #include <stdio.h>
+
+int main(void)
+{
+    int numbers[] = {0, 123, -123, 2147483647, -2147483648};
+    char *result;
+    size_t i = 0;
+    size_t num_count = sizeof(numbers) / sizeof(numbers[0]);
+
+    while (i < num_count)
+    {
+        result = ft_itoa(numbers[i]);
+        if (result)
+        {
+            printf("El número %d convertido a cadena es: %s\n", numbers[i], result);
+            free(result);
+        }
+        else
+        {
+            printf("Error al convertir el número %d\n", numbers[i]);
+        }
+        i++;
+    }
+
+    return 0;
+}
+
+*/

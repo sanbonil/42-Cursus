@@ -30,3 +30,28 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd('0' + (n % 10), fd);
 }
+
+/*#include <stdio.h>
+#include <unistd.h>  // Para el descriptor de archivo 1 (stdout)
+#include "libft.h"   // Incluye tu implementación de ft_putnbr_fd
+
+int main(void)
+{
+    int number = -12345;
+    int large_number = 2147483647;  // El valor máximo para un entero de 32 bits
+
+    // Imprimir el número negativo en la salida estándar
+    ft_putnbr_fd(number, 1);
+    write(1, "\n", 1);  // Nueva línea para separar salidas
+
+    // Imprimir el número positivo en la salida estándar
+    ft_putnbr_fd(large_number, 1);
+    write(1, "\n", 1);  // Nueva línea para separar salidas
+
+    // Imprimir el valor mínimo para un entero de 32 bits
+    ft_putnbr_fd(-2147483648, 1);
+    write(1, "\n", 1);  // Nueva línea para separar salidas
+
+    return 0;
+}
+*/

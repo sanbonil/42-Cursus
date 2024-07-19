@@ -31,3 +31,42 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+
+/* #include <stdio.h>
+#include <string.h> // Para el uso de memchr para comparación
+
+int main(void)
+{
+    char buffer[] = "Hello, world!";
+    unsigned char search_char = 'o';
+    size_t length = sizeof(buffer);
+    void *result;
+
+    result = ft_memchr(buffer, search_char, length);
+
+    if (result)
+    {
+        printf("ft_memchr encontró el carácter '%c' en la posición: %ld\n",
+               search_char, (unsigned char *)result - (unsigned char *)buffer);
+    }
+    else
+    {
+        printf("ft_memchr no encontró el carácter '%c'\n", search_char);
+    }
+
+    // Comparar con la implementación estándar
+    void *standard_result = memchr(buffer, search_char, length);
+
+    if (standard_result)
+    {
+        printf("memchr encontró el carácter '%c' en la posición: %ld\n",
+               search_char, (unsigned char *)standard_result - (unsigned char *)buffer);
+    }
+    else
+    {
+        printf("memchr no encontró el carácter '%c'\n", search_char);
+    }
+
+    return 0;
+}
+*/

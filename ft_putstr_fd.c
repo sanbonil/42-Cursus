@@ -19,3 +19,20 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, ft_strlen(s));
 }
+
+/*#include <unistd.h>  // Para la función write
+#include "libft.h"   // Incluye tu implementación de ft_putstr_fd y ft_strlen
+
+int main(void)
+{
+    char *message = "Hello, world!";
+
+    // Escribe el mensaje en la salida estándar (descriptor de archivo 1)
+    ft_putstr_fd(message, 1);
+
+    // Escribe otro mensaje en el error estándar (descriptor de archivo 2)
+    ft_putstr_fd("This is an error message.\n", 2);
+
+    return 0;
+}
+*/
